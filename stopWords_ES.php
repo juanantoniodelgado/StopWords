@@ -5,7 +5,7 @@
  * Adapted from: http://www.ranks.nl/stopwords/spanish
  * Adapted also from: http://snowball.tartarus.org/algorithms/spanish/stop.txt
  */
-$stopWords_ES_ES = array(
+$stopWords_ES = array(
     'a',
     'al',
     'alguna',
