@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with danish stop words
- * Adapted from: https://github.com/Alir3z4/stop-words/blob/master/danish.txt
- */
 $stopWords_DA = array(
     'ad',
     'af',

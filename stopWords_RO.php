@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with romanian stop words
- * Adapted from: https://raw.githubusercontent.com/Alir3z4/stop-words/master/romanian.txt
- */
 $stopWords_RO = array(
     'vreo',
     'acelea',

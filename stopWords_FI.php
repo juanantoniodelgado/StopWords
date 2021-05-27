@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with finnish stop words
- * Adapted from: https://github.com/Alir3z4/stop-words/blob/master/finnish.txt
- */
 $stopWords_FI = array(
     'ei',
     'eivät',

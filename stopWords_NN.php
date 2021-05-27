@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with norwegian stop words
- * Adapted from: https://raw.githubusercontent.com/Alir3z4/stop-words/master/norwegian.txt
- */
 $stopWords_NN = array(
     'alle',
     'at',

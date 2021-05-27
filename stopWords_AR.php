@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with arabic stop words
- * Adapted from: https://github.com/Alir3z4/stop-words/blob/master/arabic.txt
- */
 $stopWords_AR = array(
     'فى',
     'في',

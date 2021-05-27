@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with swedish stop words
- * Adapted from: https://raw.githubusercontent.com/Alir3z4/stop-words/master/swedish.txt
- */
 $stopWords_SV = array(
     'alla',
     'allt',
