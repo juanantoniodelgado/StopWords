@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with turkish stop words
- * Adapted from: https://raw.githubusercontent.com/Alir3z4/stop-words/master/turkish.txt
- */
 $stopWords_TR = array(
     'mu',
     'onlar',

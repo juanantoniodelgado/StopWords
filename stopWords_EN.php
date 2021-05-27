@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with english stop words
- * Adapted from: http://www.ranks.nl/stopwords
- */
 $stopWords_EN = array(
     '\'ll',
     '\'ve',

@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Array with spanish stop words
- * Adapted from: http://www.ranks.nl/stopwords/spanish
- * Adapted also from: http://snowball.tartarus.org/algorithms/spanish/stop.txt
- * Adapted also from: https://github.com/Alir3z4/stop-words/blob/master/spanish.txt
- */
 $stopWords_ES = array(
     'a',
     'al',

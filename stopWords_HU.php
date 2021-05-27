@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with hungarian stop words
- * Adapted from: https://github.com/Alir3z4/stop-words/blob/master/hungarian.txt
- */
 $stopWords_HU = array(
     'a',
     'abban',

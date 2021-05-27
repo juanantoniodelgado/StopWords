@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with ukrainian stop words
- * Adapted from: https://raw.githubusercontent.com/Alir3z4/stop-words/master/ukrainian.txt
- */
 $stopWords_UK = array(
     'a',
     'б',

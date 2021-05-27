@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with basque stop words
- * Adapted from: http://www.ranks.nl/stopwords/basque
- */
 $stopWords_EU = array(
     'al',
     'anitz',

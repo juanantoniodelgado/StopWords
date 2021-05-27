@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with portuguese stop words
- * Adapted from: https://raw.githubusercontent.com/Alir3z4/stop-words/master/portuguese.txt
- */
 $stopWords_PT = array(
     'a',
     'ao',

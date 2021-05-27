@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Array with french stop words
- * Adapted from: http://www.ranks.nl/stopwords/french
- * Adapted also from: https://github.com/Alir3z4/stop-words/blob/master/french.txt
- */
 $stopWords_FR = array(
     'a',
     'ai',

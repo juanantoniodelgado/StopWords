@@ -1,9 +1,5 @@
 <?php
-/**
- * Array with catalan stop words
- * Adapted from: http://www.ranks.nl/stopwords/catalan
- * Adapted also from: http://latel.upf.edu/morgana/altres/pub/ca_stop.htm
- */
+
 $stopWords_ES = array(
     'a',
     'abans',

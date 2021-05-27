@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Array with russian stop words
- * Adapted from: https://raw.githubusercontent.com/Alir3z4/stop-words/master/russian.txt
- */
 $stopWords_RU = array(
     'а',
     'в',
