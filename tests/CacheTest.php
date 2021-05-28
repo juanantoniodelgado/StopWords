@@ -11,15 +11,25 @@ use StopWords\LanguageNotFoundException;
 
 class CacheTest extends TestCase
 {
-    /** @test */
-    public function returnsWordsTest()
+    /**
+     * @test
+     *
+     * @throws LanguageNotFoundException
+     * @throws IrregularLanguageFileException
+     */
+    public function returnsWordsTest(): void
     {
         $cache = new Cache();
         $this->assertIsArray($cache->find('es'));
     }
 
-    /** @test */
-    public function languageNotFoundTest()
+    /**
+     * @test
+     *
+     * @throws LanguageNotFoundException
+     * @throws IrregularLanguageFileException
+     */
+    public function languageNotFoundTest(): void
     {
         $cache = new Cache();
 
@@ -27,8 +37,13 @@ class CacheTest extends TestCase
         $cache->find('ZZZ');
     }
 
-    /** @test */
-    public function irregularFileTest()
+    /**
+     * @test
+     *
+     * @throws LanguageNotFoundException
+     * @throws IrregularLanguageFileException
+     */
+    public function irregularFileTest(): void
     {
         $filePath = Cache::WORDS_PATH . 'test.json';
 

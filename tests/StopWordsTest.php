@@ -5,67 +5,33 @@ declare(strict_types=1);
 namespace StopWords\Tests;
 
 use PHPUnit\Framework\TestCase;
+use StopWords\IrregularLanguageFileException;
+use StopWords\LanguageNotFoundException;
 use StopWords\StopWords;
 
 class StopWordsTest extends TestCase
 {
-    /** @test */
-    public function basicTest()
+    /**
+     * @dataProvider provider
+     *
+     * @throws LanguageNotFoundException
+     * @throws IrregularLanguageFileException
+     */
+    public function testFormat(string $language, string $original, string $clean): void
     {
-        $originalMessage = 'ante mi casa';
-        $cleanMessage = 'mi casa';
-
-        $stopWords = new StopWords('es');
-        $this->assertEquals($cleanMessage, $stopWords->clean($originalMessage));
+        $stopWords = new StopWords($language);
+        $this->assertEquals($clean, $stopWords->clean($original));
     }
 
-    /** @test */
-    public function singleLetterWordTest()
+    public function provider(): array
     {
-        $originalMessage = 'a ante mi casa';
-        $cleanMessage = 'mi casa';
-
-        $stopWords = new StopWords('es');
-        $this->assertEquals($cleanMessage, $stopWords->clean($originalMessage));
-    }
-
-    /** @test */
-    public function reverseSingleLetterWordTest()
-    {
-        $originalMessage = 'ante a mi casa';
-        $cleanMessage = 'mi casa';
-
-        $stopWords = new StopWords('es');
-        $this->assertEquals($cleanMessage, $stopWords->clean($originalMessage));
-    }
-
-    /** @test */
-    public function sanitizeSpecialCharactersEndTest()
-    {
-        $originalMessage = 'ante,a.mi-casa$-_.+!*\'(),{}|\\^~[]`<>#%";/?:@&=';
-        $cleanMessage = 'mi casa';
-
-        $stopWords = new StopWords('es');
-        $this->assertEquals($cleanMessage, $stopWords->clean($originalMessage));
-    }
-
-    /** @test */
-    public function sanitizeSpecialCharactersMiddleTest()
-    {
-        $originalMessage = 'ante,a$-_.+!*\'(),{}|\\^~[]`<>#%";/?:@&=mi-casa';
-        $cleanMessage = 'mi casa';
-
-        $stopWords = new StopWords('es');
-        $this->assertEquals($cleanMessage, $stopWords->clean($originalMessage));
-    }
-
-    /** @test */
-    public function sanitizeSpecialCharactersStartTest()
-    {
-        $originalMessage = '$-_.+!*\'(),{}|\\^~[]`<>#%";/?:@&=ante,a.mi-casa';
-        $cleanMessage = 'mi casa';
-
-        $stopWords = new StopWords('es');
-        $this->assertEquals($cleanMessage, $stopWords->clean($originalMessage));
+        return [
+            ['es', 'ante mi casa', 'mi casa'],
+            ['es', 'a ante mi casa', 'mi casa'],
+            ['es', 'ante a mi casa', 'mi casa'],
+            ['es', 'ante,a.mi-casa$-_.+!*\'(),{}|\\^~[]`<>#%";/?:@&=', 'mi casa'],
+            ['es', 'ante,a$-_.+!*\'(),{}|\\^~[]`<>#%";/?:@&=mi-casa', 'mi casa'],
+            ['es', '$-_.+!*\'(),{}|\\^~[]`<>#%";/?:@&=ante,a.mi-casa', 'mi casa']
+        ];
     }
 }
