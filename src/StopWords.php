@@ -23,14 +23,12 @@ class StopWords
         return implode(' ', $iterable);
     }
 
-    private function sanitize(string $message)
+    private function sanitize(string $message): string
     {
         return preg_replace("/[^a-zA-Z0-9\s]/", " ", $message);
     }
 
     /**
-     * StopWords constructor.
-     *
      * @param string $language
      *
      * @throws LanguageNotFoundException

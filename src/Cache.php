@@ -6,8 +6,8 @@ namespace StopWords;
 
 class Cache
 {
-    CONST CACHE_PATH = './src/cache.json';
-    CONST WORDS_PATH = './src/words/';
+    public CONST CACHE_PATH = './src/cache.json';
+    public CONST WORDS_PATH = './src/words/';
 
     private $content;
 
@@ -19,7 +19,6 @@ class Cache
 
         $this->load();
     }
-
 
     /**
      * @param string $language
@@ -52,7 +51,7 @@ class Cache
         return $result['words'];
     }
 
-    private function inHandlers(string $handler)
+    private function inHandlers(string $handler): ?string
     {
         $filePath = null;
 
@@ -66,12 +65,12 @@ class Cache
         return $filePath;
     }
 
-    private function load()
+    private function load(): void
     {
         $this->content = json_decode(file_get_contents(self::CACHE_PATH), true);
     }
 
-    private function refresh()
+    private function refresh(): void
     {
         $handlers = array();
         $fileList = preg_grep('~\.(json)$~', scandir(self::WORDS_PATH));
