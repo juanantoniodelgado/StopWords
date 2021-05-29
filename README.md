@@ -26,6 +26,7 @@ Language   |  Source
 ---------- | -----------------
 Arabic     | https://github.com/Alir3z4/stop-words/blob/master/arabic.txt
 Basque     | http://www.ranks.nl/stopwords/basque
+Bulgarian  | https://github.com/Alir3z4/stop-words/blob/master/bulgarian.txt
 Catalan    | http://www.ranks.nl/stopwords/catalan http://latel.upf.edu/morgana/altres/pub/ca_stop.htm
 Danish     | https://github.com/Alir3z4/stop-words/blob/master/danish.txt
 Dutch      | https://github.com/Alir3z4/stop-words/blob/master/dutch.txt
