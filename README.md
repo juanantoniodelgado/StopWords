@@ -2,24 +2,22 @@
 
 PHP StopWords removal library with support for multiple languages.
 
-### Installation
+## Installation
 
     composer require juanantoniodelgado/stopwords
 
-### Usage
+## Usage
 
     use StopWords/StopWords;
     
     $stopwords = new StopWords('en');
     $stopwords->clean('your text to clean');
 
-### Supported languages
+## Supported languages
 Arabic, Basque, Catalan, Danish, Dutch, English, Finnish, French, German, Hungarian, Italian, Norwegian, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukrainian.
 
 ### Notes
-Language files are set according to [ISO 639-2].
-
-[ISO 639-2]: https://www.loc.gov/standards/iso639-2/php/code_list.php
+Language files are set according to [ISO 639-2][standard].
 
 ### Sources
 Language   |  Source
@@ -44,7 +42,8 @@ Swedish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/swedish
 Turkish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/turkish.txt
 Ukrainian  | https://raw.githubusercontent.com/Alir3z4/stop-words/master/ukrainian.txt
 
-### License
-Contents of this repository are available under [Attribution 4.0 International (CC BY 4.0)][LICENSE].
+## License
+Contents of this repository are available under [Attribution 4.0 International (CC BY 4.0)][license].
 
-[LICENSE]: http://creativecommons.org/licenses/by/4.0/
+[standard]: https://www.loc.gov/standards/iso639-2/php/code_list.php
+[license]: http://creativecommons.org/licenses/by/4.0/
