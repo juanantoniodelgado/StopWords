@@ -35,6 +35,7 @@ English    | http://www.ranks.nl/stopwords
 Finnish    | https://github.com/Alir3z4/stop-words/blob/master/finnish.txt
 French     | http://www.ranks.nl/stopwords/french https://github.com/Alir3z4/stop-words/blob/master/french.txt
 German     | https://github.com/Alir3z4/stop-words/blob/master/german.txt
+Gujarati   | https://github.com/Alir3z4/stop-words/blob/master/gujarati.txt
 Hungarian  | https://github.com/Alir3z4/stop-words/blob/master/hungarian.txt
 Italian    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/italian.txt
 Norwegian  | https://raw.githubusercontent.com/Alir3z4/stop-words/master/norwegian.txt
