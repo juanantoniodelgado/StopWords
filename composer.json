@@ -4,9 +4,14 @@
     "description": "A stopwords removal library",
     "homepage": "https://github.com/juanantoniodelgado/StopWords",
     "license": "CC-BY-4.0",
+    "keywords": [
+        "stopwords",
+        "stop words",
+        "stop-words"
+    ],
     "authors": [{
         "name": "Juan Antonio Delgado",
-        "email": "juanantoniodelgadolopez@outlook.com"
+        "homepage": "https://github.com/juanantoniodelgado"
     }],
     "require": {
         "php": ">=7.3"
