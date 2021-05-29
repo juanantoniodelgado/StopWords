@@ -46,6 +46,7 @@ Norwegian  | https://raw.githubusercontent.com/Alir3z4/stop-words/master/norwegi
 Portuguese | https://raw.githubusercontent.com/Alir3z4/stop-words/master/portuguese.txt
 Romanian   | https://raw.githubusercontent.com/Alir3z4/stop-words/master/romanian.txt
 Russian    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/russian.txt
+Slovak     | https://github.com/Alir3z4/stop-words/blob/master/slovak.txt
 Spanish    | http://www.ranks.nl/stopwords/spanish http://snowball.tartarus.org/algorithms/spanish/stop.txt https://github.com/Alir3z4/stop-words/blob/master/spanish.txt
 Swedish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/swedish.txt
 Turkish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/turkish.txt
