@@ -33,11 +33,11 @@ class Cache
         $language = mb_strtolower($language);
         $filePath = $this->inHandlers($language);
 
-        if (is_null($filePath)) {
+        if ($filePath === null) {
             $this->refresh();
             $filePath = $this->inHandlers($language);
 
-            if (is_null($filePath)) {
+            if ($filePath === null) {
                 throw new LanguageNotFoundException();
             }
         }
