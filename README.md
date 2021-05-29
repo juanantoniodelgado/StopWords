@@ -16,7 +16,7 @@ PHP StopWords removal library with support for multiple languages.
     $stopwords->clean('your text to clean');
 
 ## Supported languages
-Arabic, Basque, Catalan, Danish, Dutch, English, Finnish, French, German, Hungarian, Italian, Norwegian, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukrainian.
+Arabic, Basque, Bulgarian, Catalan, Czech, Danish, Dutch, English, Finnish, French, German, Gujarati, Hebrew, Hindi, Hungarian, Indonesian, Italian, Malay, Norwegian, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Turkish, Ukrainian, and Vietnamese.
 
 ### Notes
 Language files are set according to [ISO 639-2][standard].
