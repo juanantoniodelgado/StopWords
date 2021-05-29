@@ -51,6 +51,7 @@ Spanish    | http://www.ranks.nl/stopwords/spanish http://snowball.tartarus.org/
 Swedish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/swedish.txt
 Turkish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/turkish.txt
 Ukrainian  | https://raw.githubusercontent.com/Alir3z4/stop-words/master/ukrainian.txt
+Vietnamese | https://github.com/Alir3z4/stop-words/blob/master/vietnamese.txt
 
 ## License
 Contents of this repository are available under [Attribution 4.0 International (CC BY 4.0)][license].
