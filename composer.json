@@ -1,4 +1,16 @@
 {
+    "name": "juanantoniodelgado/stopwords",
+    "type": "library",
+    "description": "A stopwords removal library",
+    "homepage": "https://github.com/juanantoniodelgado/StopWords",
+    "license": "CC-BY-4.0",
+    "authors": [{
+        "name": "Juan Antonio Delgado",
+        "email": "juanantoniodelgadolopez@outlook.com"
+    }],
+    "require": {
+        "php": ">=7.3"
+    },
     "autoload": {
         "psr-4": {"StopWords\\": "src/"}
     },
