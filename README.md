@@ -41,6 +41,7 @@ Hindi      | https://github.com/Alir3z4/stop-words/blob/master/hindi.txt
 Hungarian  | https://github.com/Alir3z4/stop-words/blob/master/hungarian.txt
 Indonesian | https://github.com/Alir3z4/stop-words/blob/master/indonesian.txt
 Italian    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/italian.txt
+Malay      | https://github.com/Alir3z4/stop-words/blob/master/malaysian.txt
 Norwegian  | https://raw.githubusercontent.com/Alir3z4/stop-words/master/norwegian.txt
 Portuguese | https://raw.githubusercontent.com/Alir3z4/stop-words/master/portuguese.txt
 Romanian   | https://raw.githubusercontent.com/Alir3z4/stop-words/master/romanian.txt
