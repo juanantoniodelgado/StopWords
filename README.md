@@ -16,7 +16,7 @@ PHP StopWords removal library with support for multiple languages.
     $stopwords->clean('your text to clean');
 
 ## Supported languages
-Arabic, Armenian, Basque, Bulgarian, Catalan, Cebuano, Chinese, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Latvian, Malay, Norwegian, Persian, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Turkish, Ukrainian, and Vietnamese.
+Arabic, Armenian, Basque, Bulgarian, Catalan, Cebuano, Chinese, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Latvian, Malay, Norwegian, Persian, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Thai, Turkish, Ukrainian, and Vietnamese.
 
 ### Notes
 Language files are set according to [ISO 639-2][standard].
@@ -57,6 +57,7 @@ Russian    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/russian
 Slovak     | https://github.com/Alir3z4/stop-words/blob/master/slovak.txt
 Spanish    | http://www.ranks.nl/stopwords/spanish http://snowball.tartarus.org/algorithms/spanish/stop.txt https://github.com/Alir3z4/stop-words/blob/master/spanish.txt
 Swedish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/swedish.txt
+Thai       | https://github.com/stopwords-iso/stopwords-th
 Turkish    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/turkish.txt
 Ukrainian  | https://raw.githubusercontent.com/Alir3z4/stop-words/master/ukrainian.txt
 Vietnamese | https://github.com/Alir3z4/stop-words/blob/master/vietnamese.txt
