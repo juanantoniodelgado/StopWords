@@ -1,0 +1,39 @@
+{
+    "name": "Cebuano",
+    "handlers": [
+        "cebuano",
+        "ceb"
+    ],
+    "words": [
+        "ako",
+        "amua",
+        "ato",
+        "busa",
+        "ikaw",
+        "ila",
+        "ilang",
+        "imo",
+        "imong",
+        "iya",
+        "iyang",
+        "kaayo",
+        "kana",
+        "kaniya",
+        "kaugalingon",
+        "kay",
+        "kini",
+        "kinsa",
+        "kita",
+        "lamang",
+        "mahimong",
+        "mga",
+        "mismo",
+        "nahimo",
+        "nga",
+        "pareho",
+        "pud",
+        "sila",
+        "siya",
+        "unsa"
+    ]
+}
