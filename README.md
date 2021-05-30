@@ -16,7 +16,7 @@ PHP StopWords removal library with support for multiple languages.
     $stopwords->clean('your text to clean');
 
 ## Supported languages
-Arabic, Armenian, Basque, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Malay, Norwegian, Persian, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Turkish, Ukrainian, and Vietnamese.
+Arabic, Armenian, Basque, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Latvian, Malay, Norwegian, Persian, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Turkish, Ukrainian, and Vietnamese.
 
 ### Notes
 Language files are set according to [ISO 639-2][standard].
@@ -45,6 +45,7 @@ Hungarian  | https://github.com/Alir3z4/stop-words/blob/master/hungarian.txt
 Indonesian | https://github.com/Alir3z4/stop-words/blob/master/indonesian.txt
 Italian    | https://raw.githubusercontent.com/Alir3z4/stop-words/master/italian.txt
 Japanese   | https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxrZXZpbmJvdWdlfGd4OjdhNWQxZGQwOTE3ZjVkY2M
+Latvian    | https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxrZXZpbmJvdWdlfGd4OjNiNGI5YTVmYjkxOWEwYmQ
 Malay      | https://github.com/Alir3z4/stop-words/blob/master/malaysian.txt
 Norwegian  | https://raw.githubusercontent.com/Alir3z4/stop-words/master/norwegian.txt
 Persian    | https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxrZXZpbmJvdWdlfGd4OjY0MWMxMDBjZTc2Y2ZmZjk
