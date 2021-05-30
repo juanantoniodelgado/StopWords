@@ -6,8 +6,8 @@ namespace StopWords;
 
 class Cache
 {
-    public CONST CACHE_PATH = './src/cache.json';
-    public CONST WORDS_PATH = './src/words/';
+    public const CACHE_PATH = './src/cache.json';
+    public const WORDS_PATH = './src/words/';
 
     private $content;
 
