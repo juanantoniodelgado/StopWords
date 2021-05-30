@@ -1,6 +1,8 @@
 # StopWords
 
+[![Latest Stable Version](https://poser.pugx.org/juanantoniodelgado/stopwords/v)](//packagist.org/packages/juanantoniodelgado/stopwords)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/261207a0691141f69d91c56465c6dd32)](https://www.codacy.com/gh/juanantoniodelgado/StopWords/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=juanantoniodelgado/StopWords&amp;utm_campaign=Badge_Grade)
+[![License](https://poser.pugx.org/juanantoniodelgado/stopwords/license)](//packagist.org/packages/juanantoniodelgado/stopwords)
 
 PHP StopWords removal library with support for multiple languages.
 
