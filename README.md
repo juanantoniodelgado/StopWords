@@ -35,7 +35,7 @@ Czech      | https://github.com/Alir3z4/stop-words/blob/master/czech.txt
 Danish     | https://github.com/Alir3z4/stop-words/blob/master/danish.txt
 Dutch      | https://github.com/Alir3z4/stop-words/blob/master/dutch.txt
 English    | http://www.ranks.nl/stopwords
-Estonian   | https://github.com/kristel-/estonian-stopwords/blob/master/estonian-stopwords.txt
+Estonian   | https://github.com/stopwords-iso/stopwords-et
 Finnish    | https://github.com/Alir3z4/stop-words/blob/master/finnish.txt
 French     | http://www.ranks.nl/stopwords/french https://github.com/Alir3z4/stop-words/blob/master/french.txt
 German     | https://github.com/Alir3z4/stop-words/blob/master/german.txt
