@@ -15,7 +15,7 @@ class StopWords
         $iterable = preg_split("/\s+/", $message);
 
         foreach ($iterable as $pos => $item) {
-            if (in_array(mb_strtolower($item), $this->words) || strlen(trim($item)) === 0) {
+            if (in_array(mb_strtolower($item), $this->words) || mb_strlen(trim($item)) === 0) {
                 unset($iterable[$pos]);
             }
         }
