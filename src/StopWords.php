@@ -25,7 +25,7 @@ class StopWords
 
     private function sanitize(string $message): string
     {
-        return preg_replace("/[^a-zA-Z0-9\p{L}\p{N}\_\s\-]/", " ", $message);
+        return preg_replace("/[^\p{L}\p{N}\_\s\-]/", " ", $message);
     }
 
     /**
