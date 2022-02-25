@@ -12,7 +12,7 @@ class StopWords
     {
         $message = $this->sanitize($message);
 
-        $iterable = preg_split("/\s+/", $message);
+        $iterable = mb_split("/\s+/", $message);
 
         foreach ($iterable as $pos => $item) {
             if (in_array(mb_strtolower($item), $this->words) || mb_strlen(trim($item)) === 0) {
@@ -25,7 +25,7 @@ class StopWords
 
     private function sanitize(string $message): string
     {
-        return preg_replace("/[^\p{L}\p{N}\_\s\-]/", " ", $message);
+        return mb_ereg_replace("/[^\p{L}\p{N}\_\s\-]/", " ", $message);
     }
 
     /**
