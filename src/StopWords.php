@@ -12,7 +12,8 @@ class StopWords
     {
         $message = $this->sanitize($message);
 
-        $iterable = mb_split("/\s+/", $message);
+        // mb_split does not use any delimiters - https://www.php.net/manual/de/function.mb-split.php#103470
+        $iterable = mb_split("\s+", $message);
 
         foreach ($iterable as $pos => $item) {
             if (in_array(mb_strtolower($item), $this->words) || mb_strlen(trim($item)) === 0) {
