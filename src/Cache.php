@@ -6,14 +6,19 @@ namespace StopWords;
 
 class Cache
 {
-    public const CACHE_PATH = './src/cache.json';
-    public const WORDS_PATH = './src/words/';
+    public const CACHE_FILE = 'cache.json';
+    public const WORDS_FOLDER = 'words';
 
+    private $cachePath;
+    private $wordsPath;
     private $content;
 
     public function __construct()
     {
-        if (file_exists(self::CACHE_PATH) === false) {
+        $this->cachePath = dirname(__FILE__) . DIRECTORY_SEPARATOR . self::CACHE_FILE;
+        $this->wordsPath = dirname(__FILE__) . DIRECTORY_SEPARATOR . self::WORDS_FOLDER . DIRECTORY_SEPARATOR;
+
+        if (file_exists($this->cachePath) === false) {
             $this->refresh();
         }
 
@@ -57,7 +62,7 @@ class Cache
 
         foreach ($this->content as $filename => $handlers) {
             if (in_array($handler, $handlers)) {
-                $filePath = self::WORDS_PATH . $filename;
+                $filePath = $this->wordsPath . $filename;
                 break;
             }
         }
@@ -67,20 +72,20 @@ class Cache
 
     private function load(): void
     {
-        $this->content = json_decode(file_get_contents(self::CACHE_PATH), true);
+        $this->content = json_decode(file_get_contents($this->cachePath), true);
     }
 
     private function refresh(): void
     {
         $handlers = array();
-        $fileList = preg_grep('~\.(json)$~', scandir(self::WORDS_PATH));
+        $fileList = preg_grep('~\.(json)$~', scandir($this->wordsPath));
 
         foreach ($fileList as $item) {
-            $content = json_decode(file_get_contents(self::WORDS_PATH . $item), true);
+            $content = json_decode(file_get_contents($this->wordsPath . $item), true);
             $handlers[$item] = $content['handlers'];
         }
 
         $this->content = $handlers;
-        file_put_contents(self::CACHE_PATH, json_encode($handlers));
+        file_put_contents($this->cachePath, json_encode($handlers));
     }
 }

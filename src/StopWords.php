@@ -12,10 +12,11 @@ class StopWords
     {
         $message = $this->sanitize($message);
 
-        $iterable = preg_split("/\s+/", $message);
+        // mb_split does not use any delimiters - https://www.php.net/manual/de/function.mb-split.php#103470
+        $iterable = mb_split("\s+", $message);
 
         foreach ($iterable as $pos => $item) {
-            if (in_array(mb_strtolower($item), $this->words) || strlen(trim($item)) === 0) {
+            if (in_array(mb_strtolower($item), $this->words) || mb_strlen(trim($item)) === 0) {
                 unset($iterable[$pos]);
             }
         }
@@ -25,7 +26,7 @@ class StopWords
 
     private function sanitize(string $message): string
     {
-        return preg_replace("/[^a-zA-Z0-9\s]/", " ", $message);
+        return mb_ereg_replace("/[^\p{L}\p{N}\_\s\-]/", " ", $message);
     }
 
     /**
