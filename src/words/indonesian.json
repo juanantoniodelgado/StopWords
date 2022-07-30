@@ -1,6 +1,6 @@
 {
     "name": "Indonesian",
-    "handler": [
+    "handlers": [
         "indonesian",
         "ind",
         "id"
