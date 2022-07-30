@@ -6,11 +6,21 @@ namespace StopWords;
 
 class StopWords
 {
-    private $words;
+    private array $words;
 
-    public function clean(string $message): string
+    /**
+     * @throws LanguageNotFoundException
+     * @throws IrregularLanguageFileException
+     */
+    public function __construct(string $language)
     {
-        $message = $this->sanitize($message);
+        $cache = new Cache();
+        $this->words = $cache->find($language);
+    }
+
+    public function clean(string $message) : string
+    {
+        $message = Sanitizer::sanitize($message);
 
         // mb_split does not use any delimiters - https://www.php.net/manual/de/function.mb-split.php#103470
         $iterable = mb_split("\s+", $message);
@@ -22,22 +32,5 @@ class StopWords
         }
 
         return implode(' ', $iterable);
-    }
-
-    private function sanitize(string $message): string
-    {
-        return mb_ereg_replace("/[^\p{L}\p{N}\_\s\-]/", " ", $message);
-    }
-
-    /**
-     * @param string $language
-     *
-     * @throws LanguageNotFoundException
-     * @throws IrregularLanguageFileException
-     */
-    public function __construct(string $language)
-    {
-        $cache = new Cache();
-        $this->words = $cache->find($language);
     }
 }

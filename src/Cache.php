@@ -9,10 +9,13 @@ class Cache
     public const CACHE_FILE = 'cache.json';
     public const WORDS_FOLDER = 'words';
 
-    private $cachePath;
-    private $wordsPath;
-    private $content;
+    private string $cachePath;
+    private string $wordsPath;
 
+    /** @var list<string> Cache file turn into a workable PHP array */
+    private array $content;
+
+    /** @throws IrregularLanguageFileException */
     public function __construct()
     {
         $this->cachePath = dirname(__FILE__) . DIRECTORY_SEPARATOR . self::CACHE_FILE;
@@ -26,14 +29,12 @@ class Cache
     }
 
     /**
-     * @param string $language
-     *
-     * @return array
+     * @return list<string> List of words to remove
      *
      * @throws LanguageNotFoundException
      * @throws IrregularLanguageFileException
      */
-    public function find(string $language): array
+    public function find(string $language) : array
     {
         $language = mb_strtolower($language);
         $filePath = $this->inHandlers($language);
@@ -43,20 +44,20 @@ class Cache
             $filePath = $this->inHandlers($language);
 
             if ($filePath === null) {
-                throw new LanguageNotFoundException();
+                throw LanguageNotFoundException::fromLanguage($language);
             }
         }
 
         $result = json_decode(file_get_contents($filePath), true);
 
         if (isset($result['words']) === false) {
-            throw new IrregularLanguageFileException();
+            throw IrregularLanguageFileException::fromFile($filePath);
         }
 
         return $result['words'];
     }
 
-    private function inHandlers(string $handler): ?string
+    private function inHandlers(string $handler) : ?string
     {
         $filePath = null;
 
@@ -70,18 +71,24 @@ class Cache
         return $filePath;
     }
 
-    private function load(): void
+    private function load() : void
     {
         $this->content = json_decode(file_get_contents($this->cachePath), true);
     }
 
-    private function refresh(): void
+    /** @throws IrregularLanguageFileException */
+    private function refresh() : void
     {
         $handlers = array();
         $fileList = preg_grep('~\.(json)$~', scandir($this->wordsPath));
 
         foreach ($fileList as $item) {
             $content = json_decode(file_get_contents($this->wordsPath . $item), true);
+
+            if (isset($content['handlers']) === false) {
+                throw IrregularLanguageFileException::fromFile($this->wordsPath . $item);
+            }
+
             $handlers[$item] = $content['handlers'];
         }
 
