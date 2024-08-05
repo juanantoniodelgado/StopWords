@@ -6,11 +6,12 @@ namespace StopWords;
 
 class StopWords
 {
+    /**
+     * @var list<string> $words
+     */
     private $words;
 
     /**
-     * @param string $language
-     *
      * @throws LanguageNotFoundException
      * @throws IrregularLanguageFileException
      */

@@ -26,9 +26,7 @@ class Cache
     }
 
     /**
-     * @param string $language
-     *
-     * @return array
+     * @return list<string>
      *
      * @throws LanguageNotFoundException
      * @throws IrregularLanguageFileException
