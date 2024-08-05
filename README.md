@@ -10,7 +10,7 @@ PHP StopWords removal library with support for multiple languages.
 
 ## Usage
 
-    use StopWords/StopWords;
+    use StopWords\StopWords;
     
     $stopwords = new StopWords('en');
     $stopwords->clean('your text to clean');
