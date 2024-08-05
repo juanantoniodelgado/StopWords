@@ -8,6 +8,18 @@ class StopWords
 {
     private $words;
 
+    /**
+     * @param string $language
+     *
+     * @throws LanguageNotFoundException
+     * @throws IrregularLanguageFileException
+     */
+    public function __construct(string $language)
+    {
+        $cache = new Cache();
+        $this->words = $cache->find($language);
+    }
+
     public function clean(string $message): string
     {
         $message = $this->sanitize($message);
@@ -27,17 +39,5 @@ class StopWords
     private function sanitize(string $message): string
     {
         return mb_ereg_replace("/[^\p{L}\p{N}\_\s\-]/", " ", $message);
-    }
-
-    /**
-     * @param string $language
-     *
-     * @throws LanguageNotFoundException
-     * @throws IrregularLanguageFileException
-     */
-    public function __construct(string $language)
-    {
-        $cache = new Cache();
-        $this->words = $cache->find($language);
     }
 }
