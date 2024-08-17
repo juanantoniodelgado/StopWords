@@ -9,7 +9,7 @@ class StopWords
     /**
      * @var list<string> $words
      */
-    private $words;
+    private array $words;
 
     /**
      * @throws LanguageNotFoundException
@@ -39,6 +39,6 @@ class StopWords
 
     private function sanitize(string $message): string
     {
-        return mb_ereg_replace("/[^\p{L}\p{N}\_\s\-]/", " ", $message);
+        return mb_ereg_replace("[^\p{L}\p{N}\s]", " ", $message);
     }
 }
